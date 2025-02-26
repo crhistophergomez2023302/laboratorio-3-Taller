@@ -5,8 +5,10 @@ import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 import { dbConnection } from "./mongo.js";
+import createAdmin from "../src/auth/auth.controller.js"
 import apiLimiter from "../src/middlewares/rate-limit-validator.js";
 import { swaggerDocs, swaggerUi } from "./swagger.js";
+import authRoutes from "../src/auth/auth.routes.js"
 
 const middlewares = (app) => {
     app.use(express.urlencoded({ extended: false }));
@@ -18,7 +20,8 @@ const middlewares = (app) => {
 };
 
 const routes = (app) => {
-    app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
+    app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+    app.use("/coperex/v1/auth", authRoutes);
 };
 
 const conectarDB = async () => {
@@ -33,6 +36,7 @@ const conectarDB = async () => {
 export const initServer = () => {
     const app = express()
     try{
+        createAdmin()
         middlewares(app)
         conectarDB()
         routes(app)
