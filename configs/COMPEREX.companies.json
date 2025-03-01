@@ -1,0 +1,132 @@
+[{
+  "_id": {
+    "$oid": "67c28f7a402dd99edebeaa93"
+  },
+  "name": "Cemaco",
+  "impactLevel": "Medio",
+  "experience": {
+    "$date": "2017-01-01T00:00:00.000Z"
+  },
+  "category": "AGRICULTURAL_CATEGORY",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c29ce7843a7f126fe1698c"
+  },
+  "name": "Pinulito",
+  "impactLevel": "Alto",
+  "experience": {
+    "$date": "2023-01-01T00:00:00.000Z"
+  },
+  "category": "TECHNOLOGY_CATEGORY",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c29cf6843a7f126fe1698e"
+  },
+  "name": "Marfil",
+  "impactLevel": "Medio",
+  "experience": {
+    "$date": "2022-01-01T00:00:00.000Z"
+  },
+  "category": "INDUSTRIAL_CATEGORY",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c29d05843a7f126fe16990"
+  },
+  "name": "Solarium",
+  "impactLevel": "Bajo",
+  "experience": {
+    "$date": "2021-01-01T00:00:00.000Z"
+  },
+  "category": "COMMERCIAL_CATEGORY",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c29d0f843a7f126fe16992"
+  },
+  "name": "Brisa",
+  "impactLevel": "Alto",
+  "experience": {
+    "$date": "2020-01-01T00:00:00.000Z"
+  },
+  "category": "SERVICE_CATEGORY",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c29d1a843a7f126fe16994"
+  },
+  "name": "Luminaria",
+  "impactLevel": "Medio",
+  "experience": {
+    "$date": "2019-01-01T00:00:00.000Z"
+  },
+  "category": "OTHER_CATEGORY",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c29d25843a7f126fe16996"
+  },
+  "name": "Eclipse",
+  "impactLevel": "Bajo",
+  "experience": {
+    "$date": "2023-01-01T00:00:00.000Z"
+  },
+  "category": "AGRICULTURAL_CATEGORY",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c29d2f843a7f126fe16998"
+  },
+  "name": "Terranova",
+  "impactLevel": "Alto",
+  "experience": {
+    "$date": "2022-01-01T00:00:00.000Z"
+  },
+  "category": "COMMERCIAL_CATEGORY",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c29d38843a7f126fe1699a"
+  },
+  "name": "Aurora",
+  "impactLevel": "Medio",
+  "experience": {
+    "$date": "2021-01-01T00:00:00.000Z"
+  },
+  "category": "TECHNOLOGY_CATEGORY",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c29d42843a7f126fe1699c"
+  },
+  "name": "Vortex",
+  "impactLevel": "Bajo",
+  "experience": {
+    "$date": "2020-01-01T00:00:00.000Z"
+  },
+  "category": "SERVICE_CATEGORY",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67c29d4e843a7f126fe1699e"
+  },
+  "name": "Nebulosa",
+  "impactLevel": "Alto",
+  "experience": {
+    "$date": "2019-01-01T00:00:00.000Z"
+  },
+  "category": "INDUSTRIAL_CATEGORY",
+  "status": true
+}]
