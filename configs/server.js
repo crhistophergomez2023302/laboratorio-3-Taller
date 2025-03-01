@@ -1,3 +1,4 @@
+// filepath: /C:/Users/COMPUFIRE/Desktop/COPEREX/laboratorio-3-Taller/configs/server.js
 "use strict";
 
 import express from "express";
@@ -5,11 +6,11 @@ import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 import { dbConnection } from "./mongo.js";
-import createAdmin from "../src/auth/auth.controller.js"
+import createAdmin from "../src/auth/auth.controller.js";
 import apiLimiter from "../src/middlewares/rate-limit-validator.js";
 import { swaggerDocs, swaggerUi } from "./swagger.js";
-import authRoutes from "../src/auth/auth.routes.js"
-import companyRoutes from "../src/company/company.routes.js"
+import authRoutes from "../src/auth/auth.routes.js";
+import companyRoutes from "../src/company/company.routes.js";
 
 const middlewares = (app) => {
     app.use(express.urlencoded({ extended: false }));
@@ -23,7 +24,7 @@ const middlewares = (app) => {
 const routes = (app) => {
     app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
     app.use("/coperex/v1/auth", authRoutes);
-    app.use("/coperex/v1/company", companyRoutes)
+    app.use("/coperex/v1/company", companyRoutes);
 };
 
 const conectarDB = async () => {
@@ -36,15 +37,15 @@ const conectarDB = async () => {
 };
 
 export const initServer = () => {
-    const app = express()
-    try{
-        createAdmin()
-        middlewares(app)
-        conectarDB()
-        routes(app)
-        app.listen(process.env.PORT)    
-        console.log(`Server runnig on port: ${process.env.PORT}`)
-    }catch(err){
-        cosole.log(`Server init failed: ${err}`)
+    const app = express();
+    try {
+        createAdmin();
+        middlewares(app);
+        conectarDB();
+        routes(app);
+        app.listen(process.env.PORT);
+        console.log(`Server running on port: ${process.env.PORT}`);
+    } catch (err) {
+        console.log(`Server init failed: ${err}`);
     }
-}
+};

@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "99b59377-b96f-4faf-8d40-eac061f63794",
+		"name": "COPEREX",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37642998"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Crhistopher\",\r\n    \"surname\": \"Gomez\",\r\n    \"username\": \"Cryss\",\r\n    \"email\": \"crhistopher@gmail.com\",\r\n    \"password\": \"Cryss12@\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3000/coperex/v1/auth/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Cryss\",\r\n    \"email\": \"crhistopher@gmail.com\",\r\n    \"password\": \"Cryss12@\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3000/coperex/v1/auth/login/67c28929385ddd4c0d0d1238"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "Add Company",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Pinulito\",\r\n    \"impactLevel\": \"Alto\",\r\n    \"experience\": \"2000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3000/coperex/v1/company/addCompany"
+					},
+					"response": []
+				},
+				{
+					"name": "List Company",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update Company",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Cemaco\",\r\n    \"impactLevel\": \"Medio\",\r\n    \"experience\": \"2017\",\r\n    \"category\": \"AGRICULTURAL_CATEGORY\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:3000/coperex/v1/company/updateCompany/67c28f7a402dd99edebeaa93"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
