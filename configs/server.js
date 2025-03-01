@@ -9,6 +9,7 @@ import createAdmin from "../src/auth/auth.controller.js"
 import apiLimiter from "../src/middlewares/rate-limit-validator.js";
 import { swaggerDocs, swaggerUi } from "./swagger.js";
 import authRoutes from "../src/auth/auth.routes.js"
+import companyRoutes from "../src/company/company.routes.js"
 
 const middlewares = (app) => {
     app.use(express.urlencoded({ extended: false }));
@@ -22,6 +23,7 @@ const middlewares = (app) => {
 const routes = (app) => {
     app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
     app.use("/coperex/v1/auth", authRoutes);
+    app.use("/coperex/v1/company", companyRoutes)
 };
 
 const conectarDB = async () => {

@@ -5,6 +5,8 @@ import { generateJWT } from "../helpers/generate-jwt.js";
 export const register = async (req, res) => {
     try {
         const data = req.body;
+        data.role = "ADMIN_ROLE"
+        
         const encryptedPassword = await hash(data.password)
         data.password = encryptedPassword
 
